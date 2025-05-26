@@ -26,6 +26,6 @@ To reproduce all analyses, please follow these steps in a command line environme
 	Rscript code.R
 	```
 	
-If you run into any errors (especially for missing any packages), please try to install them either through CRAN or Bioconductor.
+If you run into any errors for missing any packages, please try to install them either through CRAN or Bioconductor.
 There are commented commands in the code.R script for installing most of these packages if needed.
 

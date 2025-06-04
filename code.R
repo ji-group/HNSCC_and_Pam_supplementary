@@ -30,7 +30,7 @@ sub.dir <- "HNSC"
 setwd(file.path(main.dir, sub.dir))
 
 HNSC_count=fread("TCGA-HNSC.star_counts.tsv", header=T, sep='\t',data.table=F)
-HNSC_pro<-fread("gencode.v36.annotation.gtf.gene.probeMap",header=T,sep='\t',data.table=F)
+HNSC_pro<-fread("gencode.v36.annotation.gtf.gene.probemap",header=T,sep='\t',data.table=F)
 
 HNSC_pro<-HNSC_pro[,c(1,2)]
 
@@ -1255,7 +1255,9 @@ TCGA_HNSC.file <- "TCGA_HNSC.txt"
 write.table(exprSet, file = TCGA_HNSC.file, sep = "\t", quote = FALSE, row.names = TRUE, col.names = TRUE)
 
 
-results <- CIBERSORT(LM22.file, TCGA_HNSC.file, perm = 1000, QN = F)  
+results <- CIBERSORT(LM22.file, TCGA_HNSC.file, perm = 1000, QN = F)
+# install.package("e1071")
+# need to install this package if running into error
 
 load("Cox_risk_group.rdata")
 
